@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3f1a8c9-4c46-4d41-9892-bce62ecd425f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PrimeCompression/com/djsapsan/compression/Factorization.class" afterPath="$PROJECT_DIR$/out/production/PrimeCompression/com/djsapsan/compression/Factorization.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PrimeCompression/com/djsapsan/compression/Main.class" afterPath="$PROJECT_DIR$/out/production/PrimeCompression/com/djsapsan/compression/Main.class" />
+    <list default="true" id="e3f1a8c9-4c46-4d41-9892-bce62ecd425f" name="Default" comment="Вторая версия.&#10;Зарефакторил весь код.&#10;Добавил класс Primes для работы с простыми числами.&#10;Факторизацию буду делать потом">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/djsapsan/compression/Main.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/djsapsan/compression/Primes.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/djsapsan/compression/Factorization.java" afterPath="$PROJECT_DIR$/src/com/djsapsan/compression/Factorization.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/djsapsan/compression/Main.java" afterPath="$PROJECT_DIR$/src/com/djsapsan/compression/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -100,7 +102,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1684" />
@@ -374,6 +376,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/djsapsan/compression" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -613,7 +616,7 @@
       <workItem from="1503692017398" duration="2398000" />
       <workItem from="1503740520647" duration="3009000" />
       <workItem from="1504280842974" duration="239000" />
-      <workItem from="1504435123463" duration="4910000" />
+      <workItem from="1504435123463" duration="5623000" />
     </task>
     <task id="LOCAL-00001" summary="First version.&#10;Добавил класс Factorization.">
       <created>1503254100339</created>
@@ -622,11 +625,18 @@
       <option name="project" value="LOCAL" />
       <updated>1503254100339</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Вторая версия.&#10;Зарефакторил весь код.&#10;Добавил класс Primes для работы с простыми числами.&#10;Факторизацию буду делать потом">
+      <created>1504441259921</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1504441259921</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19729000" />
+    <option name="totallyTimeSpent" value="20442000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -638,7 +648,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1036" extended-state="6" />
+    <frame x="-8" y="-8" width="1696" height="1036" extended-state="7" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -675,12 +685,55 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="TEXT_FILTER_SETTINGS">
+                <TextFilterSettings>
+                  <option name="REGEX" value="true" />
+                </TextFilterSettings>
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First version.&#10;Добавил класс Factorization." />
-    <option name="LAST_COMMIT_MESSAGE" value="First version.&#10;Добавил класс Factorization." />
+    <MESSAGE value="Вторая версия.&#10;Зарефакторил весь код.&#10;Добавил класс Primes для работы с простыми числами.&#10;Факторизацию буду делать потом" />
+    <option name="LAST_COMMIT_MESSAGE" value="Вторая версия.&#10;Зарефакторил весь код.&#10;Добавил класс Primes для работы с простыми числами.&#10;Факторизацию буду делать потом" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

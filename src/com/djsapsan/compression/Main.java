@@ -7,15 +7,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        BigInteger Number;
-        ArrayList<BigInteger> factorsArray;
+        ArrayList<Character> primesArray;
 
-        Factorization factorization = new Factorization();
+        Primes primes = new Primes();      // работаем с простыми числами
 
-        Number = new BigInteger("10");
-        factorsArray = factorization.factorsToArray(Number);
+        primesArray = primes.getIntPrimes16();                  // получаем список простых чисел
 
-        factorization.systemOut(factorsArray);
+        primes.systemOut(primesArray);                  // выводим массив на экран
 
     }
 }
